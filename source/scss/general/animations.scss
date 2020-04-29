@@ -17,3 +17,13 @@
     transform: translateY(0);
   }
 }
+
+@keyframes slide-left {
+  from {
+    transform: translateX(20%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
