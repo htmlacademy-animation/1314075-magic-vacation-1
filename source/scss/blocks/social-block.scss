@@ -27,7 +27,10 @@
   }
 
   &::before {
-    @include center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
     content: "";
     width: 100%;
     height: 100%;
@@ -35,6 +38,9 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transform: scale(1.00001);
+    transition: transform 0.5s ease, border-color 0.15s ease,
+      background-color 0.15s ease;
   }
 
   svg {
@@ -44,22 +50,21 @@
     height: 2.2rem;
   }
 
-  &:hover,
-  .social-block--active & {
+  &:hover {
     color: $c-purple;
 
     &::before {
-      width: 112.5%;
-      height: 112.5%;
+      transform: scale(1.12);
     }
   }
 
   &:focus {
-    color: $c-purple;
+    color: $c-light;
     outline: none;
 
     &::before {
       border-color: $c-purple;
+      background-color: $c-purple;
     }
 
     & + .social-block__list {
@@ -73,8 +78,6 @@
     color: $c-light;
 
     &::before {
-      width: 100%;
-      height: 100%;
       background-color: $c-purple;
       border-color: $c-purple;
     }
@@ -168,6 +171,8 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition: color 0.15s ease;
+  overflow: hidden;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -184,22 +189,43 @@
     background-color: $c-dark;
   }
 
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $c-light;
+    border: 2px solid $c-light;
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
   &:hover {
     color: $c-purple;
   }
 
   &:focus {
     color: $c-purple;
-    background-color: $c-light;
-    border-color: $c-purple;
     outline: none;
+
+    &::before {
+      transform: scale(1);
+    }
   }
 
   &:active,
   &:active:focus {
     color: $c-purple;
-    background-color: $c-light;
-    border-color: $c-light;
+
+    &::before {
+      transform: scale(1);
+    }
   }
 
   svg {
