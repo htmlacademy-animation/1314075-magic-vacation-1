@@ -38,9 +38,14 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transform: scale(1.00001);
-    transition: transform 0.5s ease, border-color 0.15s ease,
+    transform: scale(0);
+    transition: transform 0.35s $easeOutBack, border-color 0.15s ease,
       background-color 0.15s ease;
+    transition-delay: 0.5s;
+
+    body.loaded & {
+      transform: scale(1.00001);
+    }
   }
 
   svg {
@@ -53,8 +58,10 @@
   &:hover {
     color: $c-purple;
 
-    &::before {
-      transform: scale(1.12);
+    body.loaded &::before {
+      transform: scale(1.15);
+      transition-delay: 0;
+      transition-timing-function: ease;
     }
   }
 

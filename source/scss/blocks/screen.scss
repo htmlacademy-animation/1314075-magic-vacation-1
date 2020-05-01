@@ -47,6 +47,13 @@
   background-color: $c-light;
   z-index: 1;
 
+  transform: translateY(100%);
+  transition: transform 0.5s $easeOutQuad 0.15s;
+
+  body.loaded & {
+    transform: translateY(0);
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
     height: 3.5rem;
