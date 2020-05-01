@@ -237,20 +237,27 @@
   }
 
   a {
+    --duration: 0.35s;
+    --function: ease;
+
     position: relative;
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transition: color var(--duration) var(--function);
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: $c-light;
-      display: none;
-      left: 0;
+      display: block;
+      left: 100%;
+      transition: background-color var(--duration) var(--function),
+        left var(--duration) var(--function),
+        width var(--duration) var(--function);
 
       @media (min-width: $stop-scaling) {
         left: -5px;
@@ -272,7 +279,8 @@
 
     &.active {
       &::after {
-        display: block;
+        width: 100%;
+        left: 0;
       }
     }
 
@@ -284,6 +292,10 @@
       &::after {
         opacity: 1;
         background-color: $c-purple;
+        left: 0;
+        width: 100%;
+        transition: background-color var(--duration) var(--function),
+          width var(--duration) var(--function);
       }
     }
   }
