@@ -262,7 +262,7 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: color $appearanceTime $appearanceFunc;
+    transition: color $duration-short $func-entering;
 
     &::after {
       content: "";
@@ -274,8 +274,8 @@
       display: block;
       left: 100%;
       transition-property: background-color, width, left;
-      transition-duration: $appearanceTime;
-      transition-timing-function: $appearanceFunc;
+      transition-duration: $duration-short;
+      transition-timing-function: $func-entering;
 
       @media (min-width: $stop-scaling) {
         left: -5px;

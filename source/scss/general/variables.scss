@@ -23,5 +23,11 @@ $index: 1.38871;
 $easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
 $easeOutBack: cubic-bezier(0.44, 1.66, 0.64, 1);
 
-$appearanceFunc: ease-out;
-$appearanceTime: 0.3s;
+$duration-shortest: 0.15s;
+$duration-short: 0.3s;
+$duration-standard: 0.5s;
+$duration-long: 1s;
+$duration-longest: 1.5s;
+
+$func-entering: ease-out;
+$func-leaving: ease-in;

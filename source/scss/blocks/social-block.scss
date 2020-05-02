@@ -43,7 +43,7 @@
       background-color 0.15s ease;
 
     body.loaded & {
-      animation: scale-up $appearanceTime $easeOutBack 0.5s backwards;
+      animation: scale-up $duration-short $easeOutBack 0.5s backwards;
     }
   }
 
