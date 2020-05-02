@@ -262,7 +262,7 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: color var(--duration) var(--function);
+    transition: color $duration-short $func-entering;
 
     &::after {
       content: "";
@@ -274,8 +274,8 @@
       display: block;
       left: 100%;
       transition-property: background-color, width, left;
-      transition-duration: var(--duration);
-      transition-timing-function: var(--function);
+      transition-duration: $duration-short;
+      transition-timing-function: $func-entering;
 
       @media (min-width: $stop-scaling) {
         left: -5px;
