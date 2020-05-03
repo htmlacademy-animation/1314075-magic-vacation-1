@@ -60,6 +60,17 @@
   font-size: 2.4rem;
   line-height: 1.2;
 
+  animation-name: fade-in, slide-up;
+  animation-duration: $duration-standard;
+  animation-delay: $duration-short;
+  animation-timing-function: $func-entering;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+
+  .active & {
+    animation-play-state: running;
+  }
+
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
     max-width: 960px;
