@@ -64,12 +64,7 @@
   animation-duration: $duration-standard;
   animation-delay: $duration-short;
   animation-timing-function: $func-entering;
-  animation-play-state: paused;
   animation-fill-mode: both;
-
-  .active & {
-    animation-play-state: running;
-  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
@@ -161,10 +156,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     width: 4.5rem;
     height: 4.5rem;
     font-family: $font-alt;
@@ -174,6 +165,11 @@
     border-radius: 50%;
     line-height: 5rem;
     text-align: center;
+
+    animation-name: fade-color, scale-up;
+    animation-duration: $duration-short;
+    animation-timing-function: $easeOutBack;
+    animation-fill-mode: both;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       top: 1rem;
@@ -190,6 +186,23 @@
       line-height: 3rem;
       font-size: 1.4rem;
     }
+  }
+
+  &:nth-child(1)::before {
+    animation-delay: $duration-standard + $duration-short * (1 + 0.5),
+      $duration-standard + $duration-short * 1;
+  }
+  &:nth-child(2)::before {
+    animation-delay: $duration-standard + $duration-short * (2 + 0.5),
+      $duration-standard + $duration-short * 2;
+  }
+  &:nth-child(3)::before {
+    animation-delay: $duration-standard + $duration-short * (3 + 0.5),
+      $duration-standard + $duration-short * 3;
+  }
+  &:nth-child(4)::before {
+    animation-delay: $duration-standard + $duration-short * (4 + 0.5),
+      $duration-standard + $duration-short * 4;
   }
 
   p {

@@ -37,3 +37,13 @@
     transform: scale(1);
   }
 }
+
+@keyframes fade-color {
+  from {
+    color: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    color: rgba(255, 255, 255, 1);
+  }
+}
