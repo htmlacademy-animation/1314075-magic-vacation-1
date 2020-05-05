@@ -8,6 +8,7 @@ import result from "./modules/result.js";
 import form from "./modules/form.js";
 import social from "./modules/social.js";
 import FullPageScroll from "./modules/full-page-scroll";
+import {createAnimation} from "./modules/letters-animation.js";
 
 // init modules
 mobileHeight();
@@ -31,3 +32,8 @@ window.addEventListener(`load`, () => {
 document.body.addEventListener(`screenChanged`, ({detail}) => {
   window.history.pushState(null, ``, `#${detail.screenName}`);
 });
+
+const nodes = document.querySelectorAll(`[data-split-letters="true"]`);
+nodes.forEach((node) => createAnimation(node, {
+  delay: parseFloat(node.dataset.delay, 10) || 0
+}));

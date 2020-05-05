@@ -99,3 +99,24 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+span.word {
+  display: inline-block;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  vertical-align: middle;
+  // line-height: inherit;
+
+  .letter {
+    margin: 0.2em 0 -0.2em;
+    display: inline-block;
+    animation: slide-letters-up $duration-standard $easeOutQuad both;
+    animation-play-state: paused;
+    will-change: transform;
+  }
+
+  .active & .letter {
+    animation-play-state: running;
+  }
+}
