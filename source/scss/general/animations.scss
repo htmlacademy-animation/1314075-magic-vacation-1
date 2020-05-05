@@ -28,6 +28,16 @@
   }
 }
 
+@keyframes slide-right {
+  from {
+    transform: translateX(-15%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 @keyframes scale-up {
   from {
     transform: scale(0);
@@ -55,5 +65,25 @@
 
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes roll-right {
+  from {
+    transform: translate(-100px) rotate(-360deg);
+  }
+
+  to {
+    transform: translate(0) rotate(0deg);
+  }
+}
+
+@keyframes roll-left {
+  from {
+    transform: translate(100px) rotate(360deg);
+  }
+
+  to {
+    transform: translate(0) rotate(0deg);
   }
 }
