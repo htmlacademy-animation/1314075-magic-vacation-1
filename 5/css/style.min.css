@@ -921,8 +921,8 @@ img {
   overflow: hidden; }
 
 span.word {
-  display: inline-block;
-  align-items: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
   overflow: hidden;
   padding: 0 0.5rem;
   vertical-align: middle; }
