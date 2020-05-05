@@ -101,12 +101,11 @@ img {
 }
 
 span.word {
-  display: inline-block;
-  align-items: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
   overflow: hidden;
   padding: 0 0.5rem;
   vertical-align: middle;
-  // line-height: inherit;
 
   .letter {
     margin: 0.2em 0 -0.2em;
