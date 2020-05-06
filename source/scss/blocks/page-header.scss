@@ -268,29 +268,24 @@
       content: "";
       position: absolute;
       bottom: 0;
+      right: 0;
       width: 0;
       height: 2px;
       background-color: $c-light;
       display: block;
-      left: 100%;
-      transition-property: background-color, width, left;
+      transition-property: background-color, width;
       transition-duration: $duration-short;
       transition-timing-function: $func-entering;
 
       @media (min-width: $stop-scaling) {
-        left: -5px;
         right: -5px;
       }
 
       @media (max-width: $tablet) and (orientation: portrait) {
-        left: 0;
-        right: 0;
         background-color: $c-dark;
       }
 
       @media (max-width: $mobile) and (orientation: landscape) {
-        left: 0;
-        right: 0;
         background-color: $c-dark;
       }
     }
@@ -299,6 +294,7 @@
       body.loaded &::after {
         width: 100%;
         left: 0;
+        right: auto;
         transition-property: width;
         transition-delay: 0.3s;
       }
@@ -313,8 +309,14 @@
         opacity: 1;
         background-color: $c-purple;
         left: 0;
+        right: auto;
         width: 100%;
         transition-property: background-color, width;
+
+        @media (min-width: $stop-scaling) {
+          left: -5px;
+          width: calc(100% + 10px);
+        }
       }
     }
   }
