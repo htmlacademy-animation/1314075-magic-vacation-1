@@ -59,6 +59,14 @@
   font-size: 2.4rem;
   line-height: 1.2;
 
+  .active & {
+    animation-name: fade-in, slide-up;
+    animation-duration: $duration-standard;
+    animation-delay: $duration-long;
+    animation-timing-function: $func-entering;
+    animation-fill-mode: both;
+  }
+
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
     margin-bottom: -56px;
@@ -94,6 +102,14 @@
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: auto;
+
+  .active & {
+    animation-name: fade-in;
+    animation-duration: $duration-standard;
+    animation-delay: $duration-longest;
+    animation-timing-function: $func-entering;
+    animation-fill-mode: both;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;

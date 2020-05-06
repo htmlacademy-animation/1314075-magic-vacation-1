@@ -60,11 +60,13 @@
   font-size: 2.4rem;
   line-height: 1.2;
 
-  animation-name: fade-in, slide-up;
-  animation-duration: $duration-standard;
-  animation-delay: $duration-standard + $duration-shortest;
-  animation-timing-function: $func-entering;
-  animation-fill-mode: both;
+  .active & {
+    animation-name: fade-in, slide-up;
+    animation-duration: $duration-standard;
+    animation-delay: $duration-standard + $duration-shortest;
+    animation-timing-function: $func-entering;
+    animation-fill-mode: both;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
@@ -166,10 +168,12 @@
     line-height: 5rem;
     text-align: center;
 
-    animation-name: fade-color, scale-up;
-    animation-duration: $duration-short;
-    animation-timing-function: $easeOutBack;
-    animation-fill-mode: both;
+    .active & {
+      animation-name: fade-color, scale-up;
+      animation-duration: $duration-short;
+      animation-timing-function: $easeOutBack;
+      animation-fill-mode: both;
+    }
 
     @media (max-width: $tablet) and (orientation: portrait) {
       top: 1rem;
@@ -207,11 +211,14 @@
 
   p {
     margin: 0;
-    animation-name: fade-in, slide-left;
-    animation-duration: $duration-short;
-    animation-delay: $duration-short;
-    animation-timing-function: $func-entering;
-    animation-fill-mode: both;
+
+    .active & {
+      animation-name: fade-in, slide-left;
+      animation-duration: $duration-short;
+      animation-delay: $duration-short;
+      animation-timing-function: $func-entering;
+      animation-fill-mode: both;
+    }
 
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(1.4rem * 2.2);
@@ -259,11 +266,13 @@
   bottom: 6rem;
   right: 5.6rem;
 
-  animation-name: entering_link;
-  animation-duration: $duration-long;
-  animation-delay: $duration-longest * 2;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
+  .active & {
+    animation-name: entering_link;
+    animation-duration: $duration-long;
+    animation-delay: $duration-longest * 2;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
 
   @media (min-width: $stop-scaling) {
     bottom: 60px;
