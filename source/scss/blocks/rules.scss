@@ -133,7 +133,7 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 62px;
     padding-top: 6px;
-    padding-left: 65px;
+    min-height: 5rem;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
