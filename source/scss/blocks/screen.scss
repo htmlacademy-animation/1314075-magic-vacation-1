@@ -60,18 +60,14 @@
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
-
   transform: translateY(100%);
   transition: transform $duration-standard $easeOutQuad $duration-shortest;
-
-  .loaded .active & {
-    transform: translateY(0);
-  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
+    transform: translate(-100%, 100%);
 
     &.screen__footer--full {
       width: 100%;
@@ -83,10 +79,19 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
+    transform: translate(-100%, 100%);
 
     &.screen__footer--full {
       width: 100%;
       height: 16rem;
+    }
+  }
+
+  .loaded .active & {
+    transform: translateY(0);
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      transform: translate(0, 0);
     }
   }
 }
@@ -311,7 +316,8 @@
 
 .screen--story {
   background-color: $c-dark;
-  background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"), url("../img/slide3.jpg"), url("../img/slide4.jpg");
+  background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"),
+    url("../img/slide3.jpg"), url("../img/slide4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -342,7 +348,7 @@
     &::before {
       height: 100vh;
     }
-  
+
     .screen__footer {
       transform: translateY(0);
     }
