@@ -36,18 +36,6 @@
   width: 10rem;
   color: $c-light;
 
-  transition-property: opacity, transform;
-  transition-duration: 0.5s;
-  transition-timing-function: $easeOutQuad;
-
-  opacity: 0;
-  transform: translateX(-20px);
-
-  body.loaded & {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-
   @media (min-width: $stop-scaling) {
     top: -5px;
     padding: 10px 0;
@@ -142,12 +130,6 @@
 .page-header__nav {
   display: flex;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s $easeOutQuad 0.15s;
-
-  body.loaded & {
-    opacity: 1;
-  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -255,32 +237,20 @@
   }
 
   a {
-    --duration: 0.35s;
-    --function: ease;
-
     position: relative;
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: color $duration-short $func-entering;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      width: 0;
+      width: 100%;
       height: 2px;
       background-color: $c-light;
-      display: block;
-      left: 100%;
-      transition-property: background-color, width, left;
-      transition-duration: $duration-short;
-      transition-timing-function: $func-entering;
-
-      @media (min-width: $stop-scaling) {
-        left: -5px;
-        right: -5px;
-      }
+      display: none;
+      left: 0;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -296,11 +266,8 @@
     }
 
     &.active {
-      body.loaded &::after {
-        width: 100%;
-        left: 0;
-        transition-property: width;
-        transition-delay: 0.3s;
+      &::after {
+        display: block;
       }
     }
 
@@ -312,9 +279,6 @@
       &::after {
         opacity: 1;
         background-color: $c-purple;
-        left: 0;
-        width: 100%;
-        transition-property: background-color, width;
       }
     }
   }
@@ -322,7 +286,6 @@
 
 .page-header__social {
   margin-left: 4.8rem;
-  margin-right: 1px;
 
   @media (min-width: $stop-scaling) {
     margin-left: 48px;
