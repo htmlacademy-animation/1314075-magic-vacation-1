@@ -46,6 +46,14 @@ export default class FullPageScroll {
     });
     this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
     this.screenElements[this.activeScreen].classList.add(`active`);
+
+    this.screenElements[this.activeScreen].querySelectorAll(`.smil`)
+      .forEach((img) => {
+        if (img.dataset.src !== ``) {
+          img.src = img.dataset.src + `?${Date.now()}`;
+          img.dataset.src = ``;
+        }
+      });
   }
 
   changeActiveMenuItem() {
