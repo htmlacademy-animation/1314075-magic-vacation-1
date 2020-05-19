@@ -59,6 +59,14 @@
   font-size: 2.4rem;
   line-height: 1.2;
 
+  .active & {
+    animation-name: fade-in, slide-up;
+    animation-duration: $duration-standard;
+    animation-delay: $duration-long;
+    animation-timing-function: $func-entering;
+    animation-fill-mode: both;
+  }
+
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
     margin-bottom: -56px;
@@ -104,6 +112,16 @@
   }
 }
 
+@keyframes slide-prize-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 .prizes__item {
   margin-left: 7.5rem;
 
@@ -127,6 +145,14 @@
   }
 
   &--journeys {
+    .active & {
+      animation-name: fade-in, slide-prize-left;
+      animation-duration: $duration-shortest, $duration-long;
+      animation-delay: $duration-longest, $duration-longest + 2.5s;
+      animation-timing-function: $func-entering;
+      animation-fill-mode: both;
+    }
+
     .prizes__icon {
       position: relative;
       left: -5.9rem;
@@ -158,6 +184,14 @@
 
   &--cases {
     margin-left: 7rem;
+
+    .active & {
+      animation-name: fade-in;
+      animation-duration: $duration-shortest;
+      animation-delay: $duration-longest * 3;
+      animation-timing-function: $func-entering;
+      animation-fill-mode: both;
+    }
 
     @media (min-width: $stop-scaling) {
       margin-left: 70px;
@@ -193,6 +227,14 @@
   &--codes {
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
+    }
+
+    .active & {
+      animation-name: fade-in, slide-left;
+      animation-duration: $duration-shortest, $duration-standard;
+      animation-delay: $duration-longest * 5;
+      animation-timing-function: $func-entering;
+      animation-fill-mode: both;
     }
 
     .prizes__icon {
@@ -312,6 +354,11 @@
     margin-bottom: 0.3rem;
     width: 1rem;
     height: 1rem;
+    display: none;
+
+    .active & {
+      display: initial;
+    }
 
     @media (min-width: $stop-scaling) {
       margin-left: 10px;

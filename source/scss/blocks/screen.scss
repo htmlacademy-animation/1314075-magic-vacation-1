@@ -7,7 +7,21 @@
   overflow: hidden;
 
   &--hidden {
-    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .active ~ &--hidden {
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .active + &--hidden {
+    display: flex;
+    position: relative;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -46,18 +60,14 @@
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
-
   transform: translateY(100%);
   transition: transform $duration-standard $easeOutQuad $duration-shortest;
-
-  .loaded & {
-    transform: translateY(0);
-  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
+    transform: translate(-100%, 100%);
 
     &.screen__footer--full {
       width: 100%;
@@ -69,10 +79,19 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
+    transform: translate(-100%, 100%);
 
     &.screen__footer--full {
       width: 100%;
       height: 16rem;
+    }
+  }
+
+  .loaded .active & {
+    transform: translateY(0);
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      transform: translate(0, 0);
     }
   }
 }
@@ -297,7 +316,8 @@
 
 .screen--story {
   background-color: $c-dark;
-  background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"), url("../img/slide3.jpg"), url("../img/slide4.jpg");
+  background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"),
+    url("../img/slide3.jpg"), url("../img/slide4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -320,11 +340,6 @@
     transition: height $duration-standard $func-entering;
   }
 
-  .screen__wrapper {
-    opacity: 0;
-    transition: opacity $duration-short $func-entering;
-  }
-
   .screen__footer {
     transform: translateY(100%);
   }
@@ -334,18 +349,9 @@
       height: 100vh;
     }
 
-    .screen__wrapper {
-      opacity: 1;
-      transition-delay: $duration-standard;
-    }
-  
     .screen__footer {
       transform: translateY(0);
     }
-  }
-
-  .active + & {
-    display: flex;
   }
 }
 

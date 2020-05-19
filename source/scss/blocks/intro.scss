@@ -100,14 +100,14 @@ body:not(.loaded) {
   font-size: 2.4rem;
   line-height: 1.27;
   transition-property: opacity, transform;
-  transition-duration: 0.5s;
-  transition-delay: 1s;
+  transition-duration: $duration-standard;
+  transition-delay: $duration-long;
   transition-timing-function: ease-out;
 
   opacity: 0;
   transform: translateY(20px);
 
-  body.loaded & {
+  body.loaded .active & {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -159,7 +159,12 @@ body:not(.loaded) {
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
+  opacity: 0;
   transition: opacity $duration-short $func-entering $duration-longest;
+  
+  .active & {
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     margin: 0 0 16px;
