@@ -47,7 +47,7 @@
         xlink:href="#dirigible"
         attributeType="CSS"
         attributeName="opacity"
-        begin="section.repeat(1) + 0.3s"
+        begin="mountains.begin"
         dur="1s"
         from="1"
         to="0"
@@ -57,7 +57,7 @@
       <animateTransform
         id="seat-transform"
         xlink:href="#seat"
-        begin="section.repeat(1) + 0.6s"
+        begin="mountains.begin + 0.3s"
         attributeName="transform"
         type="translate"
         from="-300"
@@ -104,7 +104,7 @@
       <animateTransform
         id="clouds-transform"
         xlink:href="#clouds"
-        begin="section.repeat(1) + 1s"
+        begin="mountains.begin + 0.3s"
         attributeName="transform"
         type="translate"
         from="500"
@@ -123,7 +123,7 @@
           <animate
             attributeType="CSS"
             attributeName="opacity"
-            begin="section.repeat(1) + 0.3s"
+            begin="mountains.begin"
             dur="0.1s"
             from="1"
             to="0"
@@ -280,7 +280,7 @@
       <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M249.17 258.42h-45.06l-32.08-31.3a1.89 1.89 0 00-2.44 0l-10.2 10.23a1.72 1.72 0 01-2.25 0l-19-20.17a2.4 2.4 0 00-3.1 0l-26.42 25.64a1.71 1.71 0 01-2.25 0l-2.63-2.92a1.71 1.71 0 00-2.31 0l-17.57 19.64H40.01">
         <animate
           id="mountains"
-          begin="section.repeat(1) + 0.3s"
+          begin="section.repeat(1) + 1s"
           dur="0.5s"
           attributeName="d"
           to="M249.17 258.42h-45.06 l-32.08 0 a1.89 1.89 0 00 0 0 l-10.2 0 a1.72 1.72 0 01 0 0 l-19 0 a2.4 2.4 0 00 0 0 l-26.42 0 a1.71 1.71 0 01 0 0 l-2.63 0 a1.71 1.71 0 00 0 0 l-17.57 0 H40.01"
@@ -298,7 +298,7 @@
         <animate
           attributeType="CSS"
           attributeName="opacity"
-          begin="section.repeat(1) + 0.3s"
+          begin="mountains.begin"
           dur="0.2s"
           from="0"
           to="1"
@@ -309,14 +309,14 @@
           values="116 120; 0 0"
           keyTimes="0; 1"
           dur="0.5s"
-          begin="section.repeat(1) + 0.3s"
+          begin="mountains.begin"
           additive="sum" />
         <animateTransform attributeName="transform"
           type="scale"
           values="0.18 0.15; 1 1"
           keyTimes="0; 1"
           dur="0.5s"
-          begin="section.repeat(1) + 0.3s"
+          begin="mountains.begin"
           additive="sum" />
       </path>
 
@@ -400,7 +400,7 @@
 
       <line x1="17.55" x2="241.04" y1="224.1" y2="224.1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-opacity="0">
         <animate
-          begin="section.repeat(1) + 0.8s"
+          begin="mountains.begin + 0.5s"
           attributeName="stroke-opacity"
           dur="0.1s"
           to="1"
@@ -411,7 +411,7 @@
         <g id="clouds" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" transform="translate(0 65) scale(0.5 0.5)">
           <line x1="28.18" x2="91.09" y1="38.34" y2="38.34">
             <animateTransform
-              begin="section.repeat(1) + 1.3s"
+              begin="mountains.begin + 1s"
               attributeName="transform"
               type="translate"
               from="-10"
@@ -422,7 +422,7 @@
           <path d="M1 28.08h35.29a12.4 12.4 0 1124.8 0h17.93" />
           <line x1="218.19" x2="257.97" y1="23.72" y2="23.72">
             <animateTransform
-              begin="section.repeat(1) + 2.3s"
+              begin="mountains.begin + 2s"
               attributeName="transform"
               type="translate"
               from="-20"
