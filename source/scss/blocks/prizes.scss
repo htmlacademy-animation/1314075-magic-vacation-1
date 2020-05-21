@@ -193,15 +193,6 @@
       animation-fill-mode: both;
     }
 
-    @media (min-width: $stop-scaling) {
-      margin-left: 70px;
-    }
-
-    @media (max-width: $tablet) and (orientation: portrait) {
-      margin-left: 0;
-      padding-left: 1.5rem;
-    }
-
     .prizes__icon {
       position: relative;
       left: -5.9rem;

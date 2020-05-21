@@ -340,17 +340,9 @@
     transition: height $duration-standard $func-entering;
   }
 
-  .screen__footer {
-    transform: translateY(100%);
-  }
-
   &.active {
     &::before {
-      height: 100vh;
-    }
-
-    .screen__footer {
-      transform: translateY(0);
+      height: 100%;
     }
   }
 }
