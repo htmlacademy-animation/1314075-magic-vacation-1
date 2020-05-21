@@ -50,8 +50,11 @@ export default class FullPageScroll {
     this.screenElements[this.activeScreen].querySelectorAll(`.smil`)
       .forEach((img) => {
         if (img.dataset.src !== ``) {
-          img.src = img.dataset.src + `?${Date.now()}`;
-          img.dataset.src = ``;
+          const delay = parseFloat(img.dataset.delay || 0) * 1000;
+          setTimeout(() => {
+            img.src = img.dataset.src + `?${Date.now()}`;
+            img.dataset.src = ``;
+          }, delay);
         }
       });
   }
