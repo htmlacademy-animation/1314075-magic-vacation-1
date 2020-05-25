@@ -28,44 +28,44 @@
         />
         <animateTransform
           xlink:href="#award"
-          begin="2s"
+          begin="1.5s"
           attributeName="transform"
           type="translate"
           values="-7 -14; -15 -100; -48 -227"
           keyTimes="0; 0.75; 1"
-          dur="3.5s"
+          dur="3s"
           fill="freeze"
         />
         <animateTransform
           xlink:href="#award"
-          begin="2s"
+          begin="1.5s"
           attributeName="transform"
           type="scale"
           values="0; 0.1; 0.1; 0.32; 0.32; 0.55; 0.55; 1"
           keyTimes="0; 0.07; 0.12; 0.42; 0.5; 0.72; 0.8; 1"
           calcMode="linear"
-          dur="3.5s"
+          dur="3s"
           fill="freeze"
           additive="sum"
         />
         <animateTransform
           xlink:href="#award"
-          begin="2s"
+          begin="1.5s"
           attributeName="transform"
           type="rotate"
           values="0 143 308; 25 143 308; 0 143 308; -25 143 308; -20 143 308; -15 143 308; 15 143 308; 10 143 308; 0 143 308"
           keyTimes="0; 0.07; 0.12; 0.42; 0.45; 0.5; 0.72; 0.8; 1"
-          dur="3.5s"
+          dur="3s"
           fill="freeze"
           additive="sum"
         />
         <animateMotion
           xlink:href="#award"
-          begin="2s"
+          begin="1.5s"
           rotate="0"
           path="M173.22952 63.794161c11.662 -23.494 36.04 -31.105 44.55 -34.465c6.574 -2.595 -73.127 -9.259 -118.158 12.723c-49.666 24.244 -67.651 43.011 -65.835 82.517c0.293195 6.38029 134.597792 -27.975055 145.931022 -10.17566c19.99282 31.3997 -12.49448 101.00035 -13.26024 138.77997"
           fill="freeze"
-          dur="3.5s"
+          dur="3s"
           keyPoints="0; 0.1; 0.1; 0.52; 0.52; 0.8; 0.8; 1"
           keyTimes="0; 0.07; 0.12; 0.42; 0.5; 0.72; 0.8; 1"
           calcMode="linear"
@@ -99,7 +99,7 @@
           />
 
           <animate
-            begin="2s"
+            begin="1.6s"
             attributeType="CSS"
             attributeName="opacity"
             dur="0.4s"
@@ -108,7 +108,7 @@
             fill="freeze"
           />
           <animateTransform
-            begin="2s"
+            begin="1.6s"
             attributeName="transform"
             type="translate"
             values="0 0; 0 -10"
@@ -141,7 +141,7 @@
           />
 
           <animate
-            begin="2s"
+            begin="1.6s"
             attributeType="CSS"
             attributeName="opacity"
             dur="0.4s"
@@ -150,7 +150,7 @@
             fill="freeze"
           />
           <animateTransform
-            begin="2s"
+            begin="1.6s"
             attributeName="transform"
             type="translate"
             values="0 0; 0 -30"
@@ -187,7 +187,7 @@
           />
 
           <animate
-            begin="2s"
+            begin="1.6s"
             attributeType="CSS"
             attributeName="opacity"
             dur="0.4s"
@@ -196,7 +196,7 @@
             fill="freeze"
           />
           <animateTransform
-            begin="2s"
+            begin="1.6s"
             attributeName="transform"
             type="translate"
             values="0 0; 0 -40"
