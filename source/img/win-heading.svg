@@ -1,5 +1,5 @@
 <svg id="win-heading" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 570 110">
-    <defs>
+  <defs>
     <animateTransform
       xlink:href="#word"
       attributeName="transform"
