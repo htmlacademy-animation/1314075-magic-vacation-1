@@ -73,6 +73,13 @@
     stroke-width: 0.2rem;
     stroke-linejoin: round;
   }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+  }
 }
 
 .result__text {
