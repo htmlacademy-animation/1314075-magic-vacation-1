@@ -308,7 +308,7 @@
         <div class="game">
           <div class="game__header">
             <h2 class="game__title" data-split-letters="true">Игра</h2>
-            <div class="game__counter">
+            <div id="game-counter" class="game__counter">
               <span>05</span>:<span>00</span>
             </div>
           </div>
@@ -322,7 +322,7 @@
                   <label for="message-field" class="visually-hidden">Поле для ввода вопроса</label>
                   <input type="text" class="form__field" id="message-field">
                   <button class="form__button btn">
-                    Узнать
+                    <span>Узнать</span>
                     <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path stroke="currentColor" stroke-width="2" d="M9 19V1"/>
                       <path d="M1 9l8-8 8 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -530,9 +530,10 @@
                   begin="ch0.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -544,9 +545,10 @@
                   begin="ch1.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -558,9 +560,10 @@
                   begin="ch2.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -572,9 +575,10 @@
                   begin="ch3.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -586,9 +590,10 @@
                   begin="ch4.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -600,9 +605,10 @@
                   begin="ch5.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -614,9 +620,10 @@
                   begin="ch6.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -628,9 +635,10 @@
                   begin="ch7.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"
@@ -642,9 +650,10 @@
                   begin="ch8.begin + 0.1s"
                   attributeName="transform"
                   type="translate"
-                  values="0,0;0,70;0,65;0,70"
+                  values="0,0;0,70;0,60;0,70"
                   dur="1s"
-                  keySplines="0.11, 0, 0.5, 0;0.5, 1, 0.89, 1;0.11, 0, 0.5, 0"
+                  keyTimes="0; 0.8; 0.85; 1"
+                  keySplines="0.5, 0, 0.75, 0;0.25, 1, 0.5, 1;0.11, 0, 0.5, 0"
                   calcMode="spline"
                   fill="freeze"
                   additive="sum"

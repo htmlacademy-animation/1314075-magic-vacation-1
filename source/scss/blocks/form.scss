@@ -88,6 +88,13 @@
 .form__button {
   flex: 1 0 21rem;
 
+  .active & > span {
+    animation-name: fade-in;
+    animation-duration: $duration-short;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
   @media (orientation: portrait) {
     position: relative;
     flex: none;
