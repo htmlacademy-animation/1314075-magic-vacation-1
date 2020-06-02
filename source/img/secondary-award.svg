@@ -326,7 +326,7 @@
     <animate
       dur="0.5s"
       attributeName="d"
-      values="M2 275h0;M2 275h270;M142 275h130"
+      values="M2 275h0;M2 275h270;M100 275h180"
       keyTimes="0; 0.7; 1"
       fill="freeze"
     />
